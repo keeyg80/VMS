@@ -1,0 +1,110 @@
+
+<div class="center">
+    <h1>VMS User Registration</h1>
+    <form >
+                        <div class="txt_field">
+                            <input type="text" name="regusername"  required>
+                            <span></span>
+                            <label>User Name</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="text" name="regEmpID" required>
+                            <span></span>
+                            <label>User Employee ID</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="text" name="regUserEmail"  required>
+                            <span></span>
+                            <label>User Email Address</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="text" name="regloginid"  required>
+                            <span></span>
+                            <label>Login ID</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="password"  name="regpassword"  required>
+                            <span></span>
+                            <label>Password</label>
+                        </div>
+                        <div class="txt_field">
+                            <input type="password"  name="regconfirmpassword" required>
+                            <span></span>
+                            <label>Confirm Password</label>
+                        </div>            
+                        <div >
+                            <select class="main_select" name = "regrole">
+                            <option value="">Select Role:</option>
+                            <option value="Requester">Requester</option>
+                            <option value="Security">Security</option>
+                            </select>
+                            <br />
+                            <br />
+                        </div>
+                        <div>
+                            <select class="main_select" name = "regsite">
+                            <option value="">Select Site:</option>
+                            <option value="Nilai">Nilai</option>
+                            <option value="Melaka">Melaka</option>
+                            </select>
+                            <br />
+                            <br />
+                        </div>                
+                        <div>
+                            <select class="main_select" name = "regplant">
+                            <option value="">Select Plant/Department:</option>
+                            <!-- if site is Nilai --> 
+                            <option value="NDTY1">DTY 1</option>
+                            <option value="NDTY2">DTY 2</option>
+                            <option value="NHTY2">HTY 2</option>
+                            <option value="NKNIT">Knitting</option>
+                            <option value="NPSF">PSF</option>
+                            <option value="NPOY2">POY 2</option>
+                            <option value="NPOY4">POY 4</option>
+                            <option value="NPFY4G">PFY4G</option>
+                            <option value="NFDY2">FDY 2</option>
+                            <option value="NWEV1">WEV 1</option>
+                            <option value="NWEV2">WEV 2</option>
+                            <option value="NMC">Material Control</option>
+                            <option value="NELEC">Electrical</option>
+                            <option value="NUTIL">Utilities</option>
+                            <option value="NADM">Admin</option>
+                            <option value="NCOST">Costing</option>
+                            <option value="NPUR">Purchasing</option>
+                            <option value="NGEN">General Engineering</option>
+                            <option value="NHR">Huaman Resource</option>
+                            <option value="NSEC">Security</option>
+                            <option value="NIT">Information Technology</option>
+                            <option value="NSD">Software Development</option>
+                            <!-- if site is Melaka -->
+                            <option value="MDTY1">DTY 1</option>
+                            <option value="MDTY2">DTY 2</option>
+                            <option value="MDYE">Dyeing</option>
+                            <option value="MWEV1">WEV 1</option>
+                            <option value="MWEV2">WEV 2</option>
+                            <option value="MMC">Material Control</option>
+                            <option value="MELEC">Electrical</option>
+                            <option value="MUTIL">Utilities</option>
+                            <option value="MADM">Admin</option>
+                            <option value="MCOST">Costing</option>
+                            <option value="MPUR">Purchasing</option>
+                            <option value="MHR">Huaman Resource</option>
+                            <option value="MSEC">Security</option>
+                            <option value="MIT">Information Technology</option>
+                            </select>
+                            <br />
+                            <br /> 
+                        </div>
+                        <div>
+                            <label>User Description : </label><span></span>  
+                            <textarea name="regdescription" rows="2" cols="40" required>
+                            </textarea>
+                            <br />                           
+                        </div>
+                        <div>
+                            <input type="submit" value="Register">
+                        </div>
+                        <br /> 
+      
+    </form>
+  </div>

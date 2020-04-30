@@ -1,0 +1,31 @@
+
+    <div class="center">
+      <h1>VMS Login</h1>
+      <form #loginform="ngForm" (ngSubmit)="OnSubmit(loginform)">
+
+        <div class="txt_field">
+          <input type="text" name="username" ngModel #username="ngModel" required>          
+          <span></span>
+          <label>Login ID</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="password"  name="password" #password="ngModel"  ngModel required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="Login">
+        <div class="signup_link">
+          Not a member? <a href="/register">Register</a>          
+        </div>
+
+         <label>{{username.value}}</label>
+
+        <div>
+      </div>
+      </form>
+    </div>
+
+
