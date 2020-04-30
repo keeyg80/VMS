@@ -1,7 +1,7 @@
 
 <div class="center">
     <h1>VMS User Registration</h1>
-    <form >
+    <form #registerForm = "ngForm" (ngSubmit)="OnSubmit(registerForm)">
                         <div class="txt_field">
                             <input type="text" name="regusername"  required>
                             <span></span>
