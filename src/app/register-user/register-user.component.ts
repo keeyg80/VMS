@@ -14,6 +14,18 @@ export class RegisterUserComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.registeruser={
+      regusername:null,
+      regEmpID:null,
+      regUserEmail:null,
+      regloginid:null,
+      regpassword:null,
+      regconfirmpassword:null,
+      regplant:null,
+      regrole:null,
+      regsite:null,
+      regdescription:null
+    }    
   }
   OnSubmit(registerForm:NgForm){
     this.registeruser=registerForm.value
