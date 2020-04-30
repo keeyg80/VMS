@@ -3,37 +3,37 @@
     <h1>VMS User Registration</h1>
     <form #registerForm = "ngForm" (ngSubmit)="OnSubmit(registerForm)">
                         <div class="txt_field">
-                            <input type="text" name="regusername"  required>
+                            <input type="text" name="regusername" ngModel #regusername="ngModel" required>
                             <span></span>
                             <label>User Name</label>
                         </div>
                         <div class="txt_field">
-                            <input type="text" name="regEmpID" required>
+                            <input type="text" name="regEmpID" ngModel #regEmpID="ngModel" required>
                             <span></span>
                             <label>User Employee ID</label>
                         </div>
                         <div class="txt_field">
-                            <input type="text" name="regUserEmail"  required>
+                            <input type="text" name="regUserEmail" ngModel #regUserEmail="ngModel" required>
                             <span></span>
                             <label>User Email Address</label>
                         </div>
                         <div class="txt_field">
-                            <input type="text" name="regloginid"  required>
+                            <input type="text" name="regloginid"  ngModel #regloginid="ngModel" required>
                             <span></span>
                             <label>Login ID</label>
                         </div>
                         <div class="txt_field">
-                            <input type="password"  name="regpassword"  required>
+                            <input type="password"  name="regpassword"  ngModel #regpassword="ngModel" required>
                             <span></span>
                             <label>Password</label>
                         </div>
                         <div class="txt_field">
-                            <input type="password"  name="regconfirmpassword" required>
+                            <input type="password"  name="regconfirmpassword" ngModel #regconfirmpassword="ngModel" required>
                             <span></span>
                             <label>Confirm Password</label>
                         </div>            
                         <div >
-                            <select class="main_select" name = "regrole">
+                            <select class="main_select" name = "regrole" ngModel #regrole="ngModel">
                             <option value="">Select Role:</option>
                             <option value="Requester">Requester</option>
                             <option value="Security">Security</option>
@@ -42,7 +42,7 @@
                             <br />
                         </div>
                         <div>
-                            <select class="main_select" name = "regsite">
+                            <select class="main_select" name = "regsite" ngModel #regsite="ngModel" >
                             <option value="">Select Site:</option>
                             <option value="Nilai">Nilai</option>
                             <option value="Melaka">Melaka</option>
@@ -51,7 +51,7 @@
                             <br />
                         </div>                
                         <div>
-                            <select class="main_select" name = "regplant">
+                            <select class="main_select" name = "regplant" ngModel #regplant="ngModel" >
                             <option value="">Select Plant/Department:</option>
                             <!-- if site is Nilai --> 
                             <option value="NDTY1">DTY 1</option>
@@ -97,9 +97,11 @@
                         </div>
                         <div>
                             <label>User Description : </label><span></span>  
-                            <textarea name="regdescription" rows="2" cols="40" required>
+                            <textarea name="regdescription" rows="2" cols="40" ngModel #regdescription="ngModel" required>                             
                             </textarea>
-                            <br />                           
+                            <br /> 
+                            <label>type result :  {{regusername.value}} , {{regEmpID.value}} , {{regUserEmail.value}} , {{regloginid.value}}, {{regpassword.value}} , {{regconfirmpassword.value}} , {{regrole.value}} , {{regsite.value}} , {{regplant.value}} , {{regdescription.value}}                             
+                            </label>                          
                         </div>
                         <div>
                             <input type="submit" value="Register">
