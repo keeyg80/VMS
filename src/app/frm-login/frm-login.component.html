@@ -1,14 +1,27 @@
 
     <div class="center">
       <h1>VMS Login</h1>
+    
+
       <form #loginform="ngForm" (ngSubmit)="OnSubmit(loginform)">
 
-        <div class="txt_field">
-          <input type="text" name="username" ngModel #username="ngModel" required>          
-          <span></span>
-          <label>Login ID</label>
-        </div>
-
+       
+          <mat-form-field>
+            <mat-label>Login ID</mat-label>
+            <input matInput type="text" name="username" ngModel #username="ngModel" required >          
+            <span></span>
+            
+          </mat-form-field>
+          <div class="invalid-feedback" *ngIf="!username.valid && username.touched">Login Id is Mandatory</div>
+          
+          <mat-select  ngModel required name="Role" #role="ngModel">
+            <mat-option value = "Admin">
+                    Admin
+            </mat-option>
+            <mat-option value="Requester">
+              Requester
+            </mat-option>
+          </mat-select>
         <div class="txt_field">
           <input type="password"  name="password" #password="ngModel"  ngModel required>
           <span></span>
@@ -16,16 +29,14 @@
         </div>
         
         <div class="pass">Forgot Password?</div>
-        <input type="submit" value="Login">
+        <input type="submit" value="Login" [disabled]=!loginform.form.valid>
         <div class="signup_link">
-          Not a member? <a href="/register">Register</a>          
+          Not a member? <a [routerLink]="['/register']">Register</a>          
         </div>
-
-         <label>{{username.value}}</label>
-
         <div>
       </div>
-      </form>
+      </form> 
+
     </div>
 
 

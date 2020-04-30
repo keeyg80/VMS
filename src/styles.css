@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 body{
     margin: 0;
     padding: 0;
@@ -119,3 +120,5 @@ body{
     box-shadow: 1px 1px 11px #330033;
     background: #2691d9;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { User } from '../model/user.model'
+import { User } from '../model/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-frm-login',
@@ -11,7 +12,7 @@ export class FrmLoginComponent implements OnInit {
 
 user:User;
   
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {  
       this.user={
@@ -24,5 +25,10 @@ OnSubmit(loginForm:NgForm){
   console.log(loginForm.value.username)
   this.user=loginForm.value
   console.log(this.user)
+}
+
+nav()
+{
+  this.router.navigate(['/register']);
 }
 }
