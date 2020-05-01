@@ -1,6 +1,7 @@
 export class Registeruser {
     regusername:String;
     regEmpID:String;
+    regUserMobileNumber:String;
     regUserEmail:String;
     regloginid:String;
     regpassword:String;

@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCheckboxModule} from '@angular/material/checkbox';
+import { MatIconModule} from '@angular/material/icon';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRadioModule } from '@angular/material/radio';
@@ -36,7 +37,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatSortModule, 
     MatSnackBarModule, 
     MatDialogModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatIconModule
   ],
   exports: [
     MatButtonModule,
@@ -46,8 +48,15 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatSelectModule,
     BrowserAnimationsModule,
     MatDatepickerModule,  
-    MatRadioModule, MatMenuModule,
-    MatTableModule, MatPaginatorModule, MatSortModule, MatCheckboxModule, MatSnackBarModule, MatDialogModule
+    MatRadioModule, 
+    MatMenuModule,
+    MatTableModule, 
+    MatPaginatorModule, 
+    MatSortModule, 
+    MatCheckboxModule, 
+    MatSnackBarModule, 
+    MatDialogModule,
+    MatIconModule
   ]
 })
 

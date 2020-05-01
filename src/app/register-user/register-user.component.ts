@@ -10,13 +10,14 @@ import { Registeruser } from '../model/registeruser.model'
 export class RegisterUserComponent implements OnInit {
   
   registeruser:Registeruser;
-
+  hide = true;
   constructor() { }
 
   ngOnInit(): void {
     this.registeruser={
       regusername:null,
       regEmpID:null,
+      regUserMobileNumber:null,
       regUserEmail:null,
       regloginid:null,
       regpassword:null,
