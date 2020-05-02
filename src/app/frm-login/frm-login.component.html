@@ -35,10 +35,9 @@
         </mat-form-field>
         <div class="txt_link">Forgot Password?</div>
         <br />
-          <button mat-stroked-button color="primary" [disabled]=!loginform.form.valid >Login</button>
+          <button mat-stroked-button color="primary" style="margin-right: 10px;" [disabled]=!loginform.form.valid >Login</button>
+          <a class="txt_link" [routerLink]="['/register']">Register</a>
           <br /><br />
-        <div class="txt_link"> Not a member? <a [routerLink]="['/register']">Register</a></div>
-        <br />
         <div>
       </div>
       </form> 
