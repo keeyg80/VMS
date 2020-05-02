@@ -1,5 +1,5 @@
 export class User {
-    username:String;
+  loginID:String;
   password:String;
   role:Role;
 }

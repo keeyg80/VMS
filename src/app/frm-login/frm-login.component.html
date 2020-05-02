@@ -8,25 +8,30 @@
        
         <mat-form-field>
           <mat-label>Role</mat-label>
-          <mat-select  ngModel required name="Role" #role="ngModel">
-            <mat-option value = "Admin">Admin</mat-option>
-            <mat-option value="Requester">Requester</mat-option>
-            <mat-option value="Security">Security</mat-option>
-          </mat-select>
-        </mat-form-field>
+          <mat-select  ngModel required name="role" #role="ngModel">
+            <mat-option value="01">Admin</mat-option>
+            <mat-option value="02">Requester</mat-option>
+            <mat-option value="03">Security</mat-option>
+        </mat-select>
+        <div class="invalid-feedback" *ngIf="role.hasError('required') && role.touched"><a class="txt_error">Role is Mandatory</a></div>
+    </mat-form-field>
         
         <mat-form-field>
             <mat-label>Login ID</mat-label>
-            <input matInput type="text" name="username" maxlength="10" style="text-transform:uppercase;" ngModel #username="ngModel" required >          
+            <input matInput type="text" name="loginID" maxlength="10" style="text-transform:uppercase;" ngModel #loginID="ngModel" required >          
             <span></span>
-            <div class="invalid-feedback" *ngIf="username.invalid && username.touched"><a class="txt_error">Login Id is Mandatory</a></div>
+            <div class="invalid-feedback" *ngIf="loginID.invalid && loginID.touched"><a class="txt_error">Login Id is Mandatory</a></div>
         </mat-form-field>
 
         <mat-form-field> 
               <mat-label>Password</mat-label>
-              <input matInput type="password"  name="password" ngModel #password="ngModel" required>
+              <input matInput type="password" matInput [type]="hide ? 'password' : 'text'" minlength="6" maxlength="8" name="password" ngModel #password="ngModel" required>
               <span></span>
-              <div class="invalid-feedback" *ngIf="password.invalid && password.touched"><a class="txt_error">Login Password is Mandatory</a></div> 
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <div class="invalid-feedback" *ngIf="password.errors?.minlength && password.touched"><a class="txt_error">Password must be at least 6 characters long and maximum 8 characters.</a></div> 
+              <div class="invalid-feedback" *ngIf="password.hasError('required') && password.touched"><a class="txt_error">Password is Mandatory</a></div>              
         </mat-form-field>
         <div class="txt_link">Forgot Password?</div>
         <br />

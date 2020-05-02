@@ -11,18 +11,18 @@ import { Router } from '@angular/router';
 export class FrmLoginComponent implements OnInit {
 
 user:User;
-  
+  hide = true;
   constructor(private router:Router) { }
 
   ngOnInit(): void {  
       this.user={
-      username:null,
+      loginID:null,
       password:null,
       role:null
     }
   }
 OnSubmit(loginForm:NgForm){
-  console.log(loginForm.value.username)
+  console.log(loginForm.value.loginID)
   this.user=loginForm.value
   console.log(this.user)
 }

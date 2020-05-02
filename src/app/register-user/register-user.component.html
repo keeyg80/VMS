@@ -124,7 +124,8 @@
                             <div class="invalid-feedback" *ngIf="!regdescription.valid && regdescription.touched"><a class="txt_error">User Description is Mandatory</a></div>
                         </mat-form-field> 
                         <div>
-                            <button mat-stroked-button color="primary" [disabled]=!registerForm.form.valid >Register</button>
+                            <button mat-stroked-button color="primary" [disabled]=!registerForm.form.valid >Register</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <button mat-stroked-button color="primary" [routerLink]="['/login']" >Cancel</button>
                         </div>
                         <br /> 
       
