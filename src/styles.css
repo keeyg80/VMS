@@ -13,7 +13,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 600px;
     background: white;
     border-radius: 10px;
   }
@@ -22,13 +22,13 @@ body{
     box-sizing: border-box;
   }
 
-  .txt_error{
-    color: #fa0404;
-    font-size: 10px;
-  }
   .txt_link{
     color: #5f5f63ec;
     font-size: 12px;
+  }
+  .invalid-feedback{
+    color: #fa0404;
+    font-size: 10px;
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

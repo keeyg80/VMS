@@ -3,36 +3,34 @@
       <h2 style="text-align:center" >VMS Login</h2>
     
 
-      <form #loginform="ngForm" (ngSubmit)="OnSubmit(loginform)">
-
-       
-        <mat-form-field>
+      <form #loginform="ngForm" (ngSubmit)="OnSubmit(loginform)">       
+      <mat-form-field appearance="outline">
           <mat-label>Role</mat-label>
           <mat-select  ngModel required name="role" #role="ngModel">
             <mat-option value="01">Admin</mat-option>
             <mat-option value="02">Requester</mat-option>
             <mat-option value="03">Security</mat-option>
-        </mat-select>
-        <div class="invalid-feedback" *ngIf="role.hasError('required') && role.touched"><a class="txt_error">Role is Mandatory</a></div>
-    </mat-form-field>
-        
-        <mat-form-field>
-            <mat-label>Login ID</mat-label>
-            <input matInput type="text" name="loginID" maxlength="10" style="text-transform:uppercase;" ngModel #loginID="ngModel" required >          
-            <span></span>
-            <div class="invalid-feedback" *ngIf="loginID.invalid && loginID.touched"><a class="txt_error">Login Id is Mandatory</a></div>
-        </mat-form-field>
-
-        <mat-form-field> 
-              <mat-label>Password</mat-label>
-              <input matInput type="password" matInput [type]="hide ? 'password' : 'text'" minlength="6" maxlength="8" name="password" ngModel #password="ngModel" required>
-              <span></span>
-              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-              </button>
-              <div class="invalid-feedback" *ngIf="password.errors?.minlength && password.touched"><a class="txt_error">Password must be at least 6 characters long and maximum 8 characters.</a></div> 
-              <div class="invalid-feedback" *ngIf="password.hasError('required') && password.touched"><a class="txt_error">Password is Mandatory</a></div>              
-        </mat-form-field>
+          </mat-select>
+          <mat-error class="invalid-feedback" *ngIf="role.hasError('required') && role.touched">Role is Mandatory</mat-error>
+      </mat-form-field>
+          <br/>   
+      <mat-form-field appearance="outline">
+          <mat-label>Login ID</mat-label>
+          <input matInput type="text" name="loginID" maxlength="10" style="text-transform:uppercase;" ngModel #loginID="ngModel" required >          
+          <span></span>
+          <mat-error class="invalid-feedback" *ngIf="loginID.invalid && loginID.touched">Login Id is Mandatory</mat-error>
+      </mat-form-field>
+      <br/>
+      <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" matInput [type]="hide ? 'password' : 'text'" minlength="6" maxlength="8" name="password" ngModel #password="ngModel" required>
+          <span></span>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error class="invalid-feedback" *ngIf="password.errors?.minlength && password.touched">Password must be at least 6 characters long and maximum 8 characters.</mat-error>
+          <mat-error class="invalid-feedback" *ngIf="password.hasError('required') && password.touched">Password is Mandatory</mat-error>            
+      </mat-form-field>
         <div class="txt_link">Forgot Password?</div>
         <br />
           <button mat-stroked-button color="primary" style="margin-right: 10px;" [disabled]=!loginform.form.valid >Login</button>
